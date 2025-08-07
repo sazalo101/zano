@@ -1,4 +1,4 @@
-#  Zano - A Node.js-like Runtime in Rust
+# Zano - A Node.js-like Runtime in Rust
 
 <div align="center">
 
@@ -43,7 +43,7 @@ cargo build --release
 cargo install --path .
 ```
 
-##  Quick Start
+## Quick Start
 
 Create a new Zano project:
 ```bash
@@ -220,7 +220,7 @@ zano run dev
 const http = require('http')
 const path = require('path')
 
-console.log("🚀 Starting Zano API Server")
+console.log("Starting Zano API Server")
 
 let users = [
     {id: 1, name: "Alice", email: "alice@example.com"},
@@ -441,7 +441,7 @@ cargo test
 |--------|------|---------|
 | **Runtime** | Tokio (Rust) | libuv (C++) |
 | **Memory Safety** | ✅ Compile-time | ❌ Runtime errors possible |
-| **Performance** | 🚀 Very High | 🏃 High |
+| **Performance** | ⚡ Very High | 🏃 High |
 | **Startup Time** | ⚡ Instant | 🐌 ~50ms |
 | **Memory Usage** | 📦 Minimal | 📊 Higher baseline |
 | **Ecosystem** | 🌱 Growing | 🌍 Massive |
