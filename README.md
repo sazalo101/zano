@@ -1,4 +1,4 @@
-# 🚀 Zano - A Node.js-like Runtime in Rust
+#  Zano - A Node.js-like Runtime in Rust
 
 <div align="center">
 
@@ -43,7 +43,7 @@ cargo build --release
 cargo install --path .
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 Create a new Zano project:
 ```bash
