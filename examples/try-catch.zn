@@ -1,0 +1,19 @@
+// Test try/catch error handling
+console.log("Testing try/catch...")
+
+try {
+    console.log("In try block")
+    let result = 10 / 2
+    console.log("Division result:", result)
+} catch (error) {
+    console.error("Caught error:", error)
+}
+
+try {
+    console.log("About to throw an error")
+    throw "Something went wrong!"
+} catch (e) {
+    console.log("Caught thrown error:", e)
+}
+
+console.log("Program continues after error handling")

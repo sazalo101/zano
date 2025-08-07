@@ -1,0 +1,43 @@
+console.log("Zano Analytics Dashboard")
+
+let jan = {month: "Jan", sales: 1000, costs: 800}
+let feb = {month: "Feb", sales: 1200, costs: 900} 
+let mar = {month: "Mar", sales: 1500, costs: 1000}
+let salesData = [jan, feb, mar]
+
+function calculateProfit(record) {
+    let profit = record.sales - record.costs
+    let margin = (profit / record.sales) * 100
+    return {month: record.month, profit: profit, margin: margin}
+}
+
+function processMonth(data) {
+    console.log("Month:", data.month)
+    console.log("  Profit: $" + data.profit)
+    console.log("  Margin:", data.margin + "%")
+    return data.profit
+}
+
+let totalProfit = 0
+let i = 0
+let bestProfit = 0
+let bestMonth = ""
+
+console.log("=== MONTHLY ANALYSIS ===")
+
+while (i < salesData.length) {
+    let analysis = calculateProfit(salesData[i])
+    let profit = processMonth(analysis)
+    totalProfit = totalProfit + profit
+    
+    if (profit > bestProfit) {
+        bestProfit = profit
+        bestMonth = analysis.month
+    }
+    
+    i = i + 1
+}
+
+console.log("=== SUMMARY ===")
+console.log("Total Profit: $" + totalProfit)
+console.log("Best Month:", bestMonth, "with $" + bestProfit)

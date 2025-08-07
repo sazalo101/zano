@@ -1,0 +1,31 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Zano specific
+*.zn.bak
+test-examples/output.txt
+test-examples/input.txt  
+test-examples/data.txt
+zano_modules/
+node_modules/
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Documentation
+/doc/
+*.pdb

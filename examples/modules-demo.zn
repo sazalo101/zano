@@ -1,0 +1,12 @@
+console.log("Testing modules...")
+
+const fs = require("fs")
+console.log("fs module loaded")
+
+const path = require("path")
+console.log("path module loaded")
+
+let joined = path.join("home", "user", "file.txt")
+console.log("Path join result:", joined)
+
+console.log("Module system working!")

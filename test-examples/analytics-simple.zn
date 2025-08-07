@@ -1,0 +1,26 @@
+console.log("Zano Analytics Dashboard")
+
+let jan = {month: "Jan", sales: 1000, costs: 800}
+let feb = {month: "Feb", sales: 1200, costs: 900}
+let salesData = [jan, feb]
+
+function calculateProfit(record) {
+    let profit = record.sales - record.costs
+    return {month: record.month, profit: profit}
+}
+
+let totalProfit = 0
+let i = 0
+
+console.log("=== MONTHLY ANALYSIS ===")
+
+while (i < salesData.length) {
+    let analysis = calculateProfit(salesData[i])
+    console.log("Month:", analysis.month)
+    console.log("  Profit: $" + analysis.profit)
+    totalProfit = totalProfit + analysis.profit
+    i = i + 1
+}
+
+console.log("=== SUMMARY ===")
+console.log("Total Profit: $" + totalProfit)

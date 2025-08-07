@@ -1,0 +1,30 @@
+// Variables and functions
+let name = "World"
+const greeting = "Hello"
+
+function greet(target) {
+    return greeting + ", " + target + "!"
+}
+
+console.log(greet(name))
+
+// Arrays and Objects
+let numbers = [1, 2, 3, 4, 5]
+let person = {name: "Alice", age: 30}
+
+console.log("First number:", numbers[0])
+console.log("Person:", person.name)
+
+// Control Flow
+if (person.age >= 18) {
+    console.log("Adult")
+} else {
+    console.log("Minor")
+}
+
+// Loops
+let count = 0
+while (count < 3) {
+    console.log("Count:", count)
+    count = count + 1
+}

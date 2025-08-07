@@ -1,0 +1,13 @@
+{
+  "name": "zano-app",
+  "version": "1.0.0",
+  "description": null,
+  "main": "index.zn",
+  "dependencies": {},
+  "dev_dependencies": {},
+  "scripts": {
+    "start": "zano index.zn"
+  },
+  "author": null,
+  "license": "MIT"
+}

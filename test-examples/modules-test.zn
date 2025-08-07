@@ -1,0 +1,30 @@
+// Console Module
+console.log("Info message")
+console.error("Error message")  
+console.warn("Warning message")
+
+// File System Module
+const fs = require('fs')
+
+try {
+    fs.writeFile('data.txt', 'Hello from Zano!')
+    let content = fs.readFile('data.txt')
+    console.log("Content:", content)
+    
+    let exists = fs.exists('data.txt')
+    console.log("File exists:", exists)
+} catch (error) {
+    console.error("File operation failed:", error)
+}
+
+// Path Module
+const path = require('path')
+
+let fullPath = path.join('home', 'user', 'documents', 'file.txt')
+console.log("Full path:", fullPath)
+
+let directory = path.dirname('/home/user/file.txt')
+let filename = path.basename('/home/user/file.txt')
+
+console.log("Directory:", directory)
+console.log("Filename:", filename)

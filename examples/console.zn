@@ -1,0 +1,8 @@
+// Test console module
+console.log("Hello from console.log!")
+console.log("Multiple", "arguments", 123, true)
+console.error("This is an error message")
+console.warn("This is a warning")
+
+let message = "Zano is working!"
+console.log(message)

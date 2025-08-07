@@ -1,0 +1,24 @@
+// Async/await example in Zano
+const fs = require('fs');
+
+async function readFiles() {
+    try {
+        let content1 = await fs.readFile('file1.txt');
+        console.log("File 1:", content1);
+        
+        let content2 = await fs.readFile('file2.txt');
+        console.log("File 2:", content2);
+    } catch (error) {
+        console.error("Error reading files:", error);
+    }
+}
+
+async function writeAndRead() {
+    await fs.writeFile('test.txt', 'Hello from Zano!');
+    let content = await fs.readFile('test.txt');
+    console.log("Written and read:", content);
+}
+
+// Call async functions
+readFiles();
+writeAndRead();

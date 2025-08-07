@@ -1,0 +1,25 @@
+const fs = require('fs')
+
+console.log("File Processing Pipeline")
+
+function processLine(line) {
+    return "Processed: " + line
+}
+
+try {
+    let sampleData = "line1,line2,line3"
+    fs.writeFile('input.txt', sampleData)
+    console.log("Created input file")
+    
+    let content = fs.readFile('input.txt')
+    let result = processLine(content)
+    
+    fs.writeFile('output.txt', result)
+    console.log("Processed and saved results")
+    
+    let final = fs.readFile('output.txt')
+    console.log("Final result:", final)
+    
+} catch (error) {
+    console.error("Processing failed:", error)
+}

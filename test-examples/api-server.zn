@@ -1,0 +1,25 @@
+const http = require('http')
+
+console.log("Starting Zano API Server")
+
+let user1 = {id: 1, name: "Alice", email: "alice@example.com"}
+let user2 = {id: 2, name: "Bob", email: "bob@example.com"}
+let users = [user1, user2]
+
+function handleRequest(method, url) {
+    console.log("Request:", method, url)
+    
+    if (url == "/users") {
+        return {status: 200, message: "Users found"}
+    } else {
+        return {status: 404, error: "Not Found"}
+    }
+}
+
+let response1 = handleRequest("GET", "/users")
+console.log("API Response:", response1)
+
+let response2 = handleRequest("GET", "/posts")
+console.log("API Response:", response2)
+
+console.log("Server simulation complete")

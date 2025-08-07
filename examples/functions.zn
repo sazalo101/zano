@@ -1,0 +1,12 @@
+function add(a, b) {
+    return a + b
+}
+
+function multiply(a, b) {
+    return a * b
+}
+
+let result1 = add(5, 3)
+let result2 = multiply(4, 6)
+
+result1 + result2

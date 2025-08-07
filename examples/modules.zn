@@ -1,0 +1,25 @@
+// Test require and modules
+const fs = require("fs")
+const path = require("path")
+
+console.log("Testing fs module...")
+try {
+    fs.writeFile("test.txt", "Hello from Zano!")
+    let content = fs.readFile("test.txt")
+    console.log("File content:", content)
+    
+    let exists = fs.exists("test.txt")
+    console.log("File exists:", exists)
+} catch (error) {
+    console.error("FS error:", error)
+}
+
+console.log("Testing path module...")
+let joined = path.join("home", "user", "documents")
+console.log("Joined path:", joined)
+
+let dir = path.dirname("/home/user/file.txt")
+console.log("Directory:", dir)
+
+let base = path.basename("/home/user/file.txt")
+console.log("Basename:", base)

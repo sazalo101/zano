@@ -1,0 +1,10 @@
+console.log("Testing error handling...")
+
+try {
+    console.log("In try block")
+    throw "This is a test error"
+} catch (error) {
+    console.log("Caught error:", error)
+}
+
+console.log("Program continues after error")

@@ -1,0 +1,27 @@
+// Test arrays and objects
+let numbers = [1, 2, 3, 4, 5]
+console.log("Array:", numbers)
+console.log("First element:", numbers[0])
+console.log("Third element:", numbers[2])
+
+let person = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+}
+
+console.log("Person:", person)
+console.log("Name:", person.name)
+console.log("Age:", person["age"])
+
+// Nested structures
+let data = {
+    users: [
+        { name: "Bob", age: 25 },
+        { name: "Carol", age: 35 }
+    ],
+    count: 2
+}
+
+console.log("First user:", data.users[0])
+console.log("First user name:", data.users[0].name)

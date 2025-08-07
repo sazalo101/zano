@@ -1,0 +1,18 @@
+console.log("Welcome to Zano Runtime!")
+
+let info = {name: "Zano", version: "1.0.0"}
+console.log("Runtime Info:", info)
+
+function demo(message) {
+    console.log("Demo:", message) 
+    return "Success"
+}
+
+let result = demo("All systems working")
+console.log("Result:", result)
+
+let numbers = [1, 2, 3, 4, 5]
+console.log("Array:", numbers)
+console.log("First:", numbers[0])
+
+console.log("Zano is ready!")

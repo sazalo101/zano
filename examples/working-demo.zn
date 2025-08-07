@@ -1,0 +1,32 @@
+console.log("=== Zano Working Demo ===")
+
+let name = "Zano Runtime"
+let version = 1.0
+console.log("Welcome to", name, version)
+
+function add(a, b) {
+    return a + b
+}
+
+function multiply(x, y) {
+    return x * y
+}
+
+let result1 = add(5, 3)
+let result2 = multiply(4, 6)
+console.log("5 + 3 =", result1)
+console.log("4 * 6 =", result2)
+
+let numbers = [10, 20, 30]
+console.log("Array:", numbers)
+console.log("First element:", numbers[0])
+
+let person = {name: "Alice", age: 25}
+console.log("Person:", person)
+console.log("Name:", person.name)
+
+if (person.age > 20) {
+    console.log("Adult user detected")
+}
+
+console.log("Demo completed successfully!")

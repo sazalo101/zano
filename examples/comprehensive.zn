@@ -1,0 +1,69 @@
+// Comprehensive Zano feature demo
+console.log("=== Zano Comprehensive Demo ===")
+
+// Variables and basic operations
+let name = "Zano"
+let version = 1.0
+let isAwesome = true
+
+console.log("Runtime:", name, version, isAwesome)
+
+// Functions
+function greet(name) {
+    return "Hello, " + name + "!"
+}
+
+function calculate(a, b) {
+    return {
+        sum: a + b,
+        product: a * b,
+        difference: a - b
+    }
+}
+
+console.log(greet("World"))
+
+let result = calculate(10, 5)
+console.log("Math results:", result)
+
+// Arrays and objects
+let fruits = ["apple", "banana", "cherry"]
+let person = {
+    name: "Alice",
+    age: 30,
+    hobbies: ["reading", "coding", "gaming"],
+    address: {
+        city: "New York",
+        zip: "10001"
+    }
+}
+
+console.log("Fruits:", fruits)
+console.log("Person:", person)
+console.log("First hobby:", person.hobbies[0])
+console.log("City:", person.address.city)
+
+// Control flow
+if (person.age >= 18) {
+    console.log(person.name, "is an adult")
+} else {
+    console.log(person.name, "is a minor")
+}
+
+let count = 0
+while (count < 3) {
+    console.log("Count:", count)
+    count = count + 1
+}
+
+// Error handling
+try {
+    console.log("Testing error handling...")
+    if (person.age > 25) {
+        throw "Age is too high for this demo!"
+    }
+} catch (error) {
+    console.log("Caught:", error)
+}
+
+console.log("Demo completed successfully!")

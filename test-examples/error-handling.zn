@@ -1,0 +1,13 @@
+function riskyOperation() {
+    throw "Something went wrong!"
+}
+
+try {
+    console.log("Attempting risky operation...")
+    riskyOperation()
+    console.log("This won't be reached")
+} catch (error) {
+    console.error("Caught error:", error)
+} 
+
+console.log("Program continues...")
