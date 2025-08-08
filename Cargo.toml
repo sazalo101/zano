@@ -1,6 +1,6 @@
 [package]
 name = "zano"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "A high-performance Node.js-like runtime built in Rust with JavaScript-compatible syntax, async support, and built-in modules"
 authors = ["Samuel Aondo <sazalo101@gmail.com>"]

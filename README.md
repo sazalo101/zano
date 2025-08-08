@@ -18,17 +18,17 @@
 
 ---
 
-## 🌟 Why Zano?
+## Why Zano?
 
 Zano brings the familiar Node.js development experience to the Rust ecosystem, offering:
 
-- **🔥 Blazing Fast**: Built on Tokio's async runtime
-- **🛡️ Memory Safe**: All the safety guarantees of Rust
-- **🎯 Familiar Syntax**: Write JavaScript-like code that just works
-- **📦 Package Management**: Full package.json support
-- **🔧 Built-in Modules**: File system, HTTP, and more out of the box
+- **Blazing Fast**: Built on Tokio's async runtime
+- **Memory Safe**: All the safety guarantees of Rust
+- **Familiar Syntax**: Write JavaScript-like code that just works
+- **Package Management**: Full package.json support
+- **Built-in Modules**: File system, HTTP, and more out of the box
 
-## ⚡ Installation
+## Installation
 
 ### Install from Crates.io
 ```bash
@@ -57,7 +57,7 @@ echo 'console.log("Hello, Zano!")' > hello.zn
 zano hello.zn
 ```
 
-## 📝 Basic Syntax
+## Basic Syntax
 
 Zano supports JavaScript-like syntax with powerful features:
 
@@ -76,8 +76,7 @@ console.log(greet(name))  // Output: Hello, World!
 let numbers = [1, 2, 3, 4, 5]
 let person = {
     name: "Alice",
-    age: 30,
-    hobbies: ["coding", "reading"]
+    age: 30
 }
 
 console.log("First number:", numbers[0])
@@ -98,7 +97,7 @@ while (count < 3) {
 }
 ```
 
-## 🔧 Built-in Modules
+## Built-in Modules
 
 ### Console Module
 ```javascript
@@ -155,7 +154,7 @@ console.log("Directory:", directory)  // /home/user
 console.log("Filename:", filename)   // file.txt
 ```
 
-## 🛡️ Error Handling
+## Error Handling
 
 Robust error handling with try/catch:
 
@@ -175,7 +174,7 @@ try {
 console.log("Program continues...")
 ```
 
-## 📦 Package Management
+## Package Management
 
 Zano includes a built-in package manager similar to npm:
 
@@ -212,7 +211,7 @@ zano run start
 zano run dev
 ```
 
-## 🎯 Complete Examples
+## Complete Examples
 
 ### Example 1: Simple Web API Simulation
 ```javascript
@@ -250,7 +249,7 @@ console.log("API Response:", response1)
 let response2 = handleRequest("GET", "/posts")
 console.log("API Response:", response2)
 
-console.log("✅ Server simulation complete")
+console.log("Server simulation complete")
 ```
 
 ### Example 2: File Processing Pipeline
@@ -259,7 +258,7 @@ console.log("✅ Server simulation complete")
 const fs = require('fs')
 const path = require('path')
 
-console.log("📁 File Processing Pipeline")
+console.log("File Processing Pipeline")
 
 function processData(data) {
     let lines = data.split('\n')
@@ -280,7 +279,7 @@ try {
     // Create sample data
     let sampleData = "line1\nline2\nline3\n\nline5"
     fs.writeFile('input.txt', sampleData)
-    console.log("✅ Created input file")
+    console.log("Created input file")
     
     // Process the data
     let content = fs.readFile('input.txt')
@@ -288,7 +287,7 @@ try {
     
     // Save results
     fs.writeFile('output.txt', processed)
-    console.log("✅ Processed and saved results")
+    console.log("Processed and saved results")
     
     // Verify results
     let result = fs.readFile('output.txt')
@@ -296,7 +295,7 @@ try {
     console.log(result)
     
 } catch (error) {
-    console.error("❌ Processing failed:", error)
+    console.error("Processing failed:", error)
 }
 ```
 
@@ -324,7 +323,7 @@ let totalProfit = 0
 let bestProfit = 0
 let bestMonth = ""
 
-console.log("=== MONTHLY ANALYSIS ===")
+console.log("MONTHLY ANALYSIS")
 
 // Process January
 let janAnalysis = calculateProfit(jan)
@@ -353,12 +352,12 @@ if (marProfit > bestProfit) {
     bestMonth = marAnalysis.month
 }
 
-console.log("=== SUMMARY ===")
+console.log("SUMMARY")
 console.log("Total Profit: $" + totalProfit)
 console.log("Best Month:", bestMonth, "($" + bestProfit + ")")
 ```
 
-## 🎛️ CLI Commands
+## CLI Commands
 
 ```bash
 # Run Zano scripts
@@ -380,22 +379,22 @@ zano run <script>           # Run package.json scripts
 zano --help
 ```
 
-## ⚙️ Language Features
+## Language Features
 
 | Feature | Status | Example |
 |---------|--------|---------|
-| Variables | ✅ | `let x = 5; const y = "hello"` |
-| Functions | ✅ | `function add(a, b) { return a + b }` |
-| Arrays | ✅ | `let arr = [1, 2, 3]; arr[0]` |
-| Objects | ✅ | `let obj = {name: "test"}; obj.name` |
-| Control Flow | ✅ | `if/else`, `while` loops |
-| Error Handling | ✅ | `try/catch/throw` |
-| Modules | ✅ | `const fs = require('fs')` |
-| Async/Await | 🚧 | Coming soon |
-| Classes | 🚧 | Coming soon |
-| Destructuring | 🚧 | Coming soon |
+| Variables | Available | `let x = 5; const y = "hello"` |
+| Functions | Available | `function add(a, b) { return a + b }` |
+| Arrays | Available | `let arr = [1, 2, 3]; arr[0]` |
+| Objects | Available | `let obj = {name: "test"}; obj.name` |
+| Control Flow | Available | `if/else`, `while` loops |
+| Error Handling | Available | `try/catch/throw` |
+| Modules | Available | `const fs = require('fs')` |
+| Async/Await | Planned | Coming soon |
+| Classes | Planned | Coming soon |
+| Destructuring | Planned | Coming soon |
 
-## 🏗️ Architecture
+## Architecture
 
 Zano is built on these core technologies:
 
@@ -405,7 +404,7 @@ Zano is built on these core technologies:
 - **Modules**: Pluggable module system with built-in and custom modules
 - **Package Manager**: Cargo-inspired dependency management
 
-## 🚦 Performance
+## Performance
 
 Zano leverages Rust's performance characteristics:
 
@@ -414,7 +413,7 @@ Zano leverages Rust's performance characteristics:
 - **Concurrent**: Built on Tokio for handling thousands of concurrent operations
 - **Fast startup**: Compiled binary starts instantly
 
-## 🛠️ Development
+## Development
 
 ### Building from Source
 ```bash
@@ -435,20 +434,20 @@ cargo test
 4. Run `cargo test` and `cargo fmt`
 5. Submit a pull request
 
-## 📚 Comparison with Node.js
+## Comparison with Node.js
 
 | Aspect | Zano | Node.js |
 |--------|------|---------|
 | **Runtime** | Tokio (Rust) | libuv (C++) |
-| **Memory Safety** | ✅ Compile-time | ❌ Runtime errors possible |
-| **Performance** | ⚡ Very High | 🏃 High |
-| **Startup Time** | ⚡ Instant | 🐌 ~50ms |
-| **Memory Usage** | 📦 Minimal | 📊 Higher baseline |
-| **Ecosystem** | 🌱 Growing | 🌍 Massive |
-| **Syntax** | 📝 JS-compatible | 📝 JavaScript |
-| **Error Messages** | 🎯 Precise | 🤔 Sometimes cryptic |
+| **Memory Safety** | Compile-time | Runtime errors possible |
+| **Performance** | Very High | High |
+| **Startup Time** | Instant | ~50ms |
+| **Memory Usage** | Minimal | Higher baseline |
+| **Ecosystem** | Growing | Massive |
+| **Syntax** | JS-compatible | JavaScript |
+| **Error Messages** | Precise | Sometimes cryptic |
 
-## 🗺️ Roadmap
+## Roadmap
 
 ### Version 1.1.0
 - [ ] Full async/await support
@@ -468,17 +467,17 @@ cargo test
 - [ ] Built-in testing framework
 - [ ] Debug tooling
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Community
+## Community
 
 - **Issues**: [GitHub Issues](https://github.com/sazalo101/zano/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/sazalo101/zano/discussions)
 - **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## ⭐ Star History
+## Star History
 
 If you find Zano useful, please consider giving it a star on GitHub!
 
@@ -486,8 +485,8 @@ If you find Zano useful, please consider giving it a star on GitHub!
 
 <div align="center">
 
-**Built with ❤️ in Rust**
+**Built with love in Rust**
 
-[⬆ Back to top](#-zano---a-nodejs-like-runtime-in-rust)
+[Back to top](#zano---a-nodejs-like-runtime-in-rust)
 
 </div>
