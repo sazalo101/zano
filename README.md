@@ -216,15 +216,10 @@ zano run dev
 ### Example 1: Simple Web API Simulation
 ```javascript
 // api-server.zn
-const http = require('http')
-const path = require('path')
-
 console.log("Starting Zano API Server")
 
-let users = [
-    {id: 1, name: "Alice", email: "alice@example.com"},
-    {id: 2, name: "Bob", email: "bob@example.com"}
-]
+let user1 = {id: 1, name: "Alice", email: "alice@example.com"}
+let user2 = {id: 2, name: "Bob", email: "bob@example.com"}
 
 function handleRequest(method, url) {
     console.log("Request:", method, url)
@@ -232,7 +227,7 @@ function handleRequest(method, url) {
     if (url == "/users") {
         return {
             status: 200,
-            data: users
+            message: "Users found"
         }
     } else {
         return {
@@ -244,10 +239,12 @@ function handleRequest(method, url) {
 
 // Simulate API calls
 let response1 = handleRequest("GET", "/users")
-console.log("API Response:", response1)
+console.log("API Response status:", response1.status)
+console.log("API Response message:", response1.message)
 
 let response2 = handleRequest("GET", "/posts")
-console.log("API Response:", response2)
+console.log("API Response status:", response2.status)
+console.log("API Response error:", response2.error)
 
 console.log("Server simulation complete")
 ```
@@ -256,28 +253,16 @@ console.log("Server simulation complete")
 ```javascript
 // file-processor.zn
 const fs = require('fs')
-const path = require('path')
 
 console.log("File Processing Pipeline")
 
 function processData(data) {
-    let lines = data.split('\n')
-    let processed = []
-    
-    let i = 0
-    while (i < lines.length) {
-        if (lines[i].length > 0) {
-            processed.push("Processed: " + lines[i])
-        }
-        i = i + 1
-    }
-    
-    return processed.join('\n')
+    return "Processed: " + data
 }
 
 try {
     // Create sample data
-    let sampleData = "line1\nline2\nline3\n\nline5"
+    let sampleData = "Hello World"
     fs.writeFile('input.txt', sampleData)
     console.log("Created input file")
     

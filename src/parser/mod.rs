@@ -539,8 +539,18 @@ impl Parser {
     fn object_literal(&mut self) -> Result<Expression> {
         let mut pairs = Vec::new();
         
+        // Skip newlines at the beginning
+        while self.check(&TokenKind::Newline) {
+            self.advance();
+        }
+        
         if !self.check(&TokenKind::RightBrace) {
             loop {
+                // Skip newlines before property name
+                while self.check(&TokenKind::Newline) {
+                    self.advance();
+                }
+                
                 let key = if self.check(&TokenKind::String) {
                     self.advance().lexeme.clone()
                 } else if self.check(&TokenKind::Identifier) {
@@ -554,10 +564,25 @@ impl Parser {
                 
                 pairs.push((key, value));
                 
+                // Skip newlines before comma or closing brace
+                while self.check(&TokenKind::Newline) {
+                    self.advance();
+                }
+                
                 if !self.match_token(&TokenKind::Comma) {
                     break;
                 }
+                
+                // Skip newlines after comma
+                while self.check(&TokenKind::Newline) {
+                    self.advance();
+                }
             }
+        }
+        
+        // Skip newlines before closing brace
+        while self.check(&TokenKind::Newline) {
+            self.advance();
         }
         
         self.consume(&TokenKind::RightBrace, "Expected '}' after object properties")?;
